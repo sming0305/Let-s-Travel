@@ -1,0 +1,63 @@
+@mixin xs{
+    @media (min-width: 340px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin imgReplaceText ($url, $width, $height) {
+    background-image: url($url);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    width: $width;
+    height: $height;
+}
+
+@mixin btn ($color, $bg-color, $hover-bg-color, $active-color) {
+    color: $color;
+    background-color: $bg-color;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: lighten($hover-bg-color,10%);
+    }
+
+    &:active{
+        color: $active-color;
+    }
+}

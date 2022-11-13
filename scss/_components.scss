@@ -1,0 +1,18 @@
+.logo {
+    @include imgReplaceText("../image/undraw_Traveling_re_weve.png",200px,125px);
+
+    @include sm {
+        width: 350px;
+        height: 250px;
+    }
+}
+
+.btn{
+    @include btn(#ffffff,$primany,$primany,#000)
+}
+
+.container{
+    max-width: 1320px;
+    padding: 0 12px;
+    margin: 0 auto;
+}

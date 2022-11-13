@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>undraw Traveling</title>
+    <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
+
+    <meta name="description" content="Let's Travel套票">
+    <meta name="keywords" content="Let's Travel、旅遊、套裝行程">
+
+
+    <meta name="og:title" content="Let's Travel套票新增頁面">
+    <meta name="og:description" content="Let's Travel套票新增頁面">
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="#">
+    <meta name="og:image" content="./image/Traveling_re_weve.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/c3.css">
+    <link rel="stylesheet" href="./css/all.css">
+
+</head>
+
+<body>
+    <main>
+        <section class="pt-60 pb-50">
+            <div class="container">
+                <div
+                    class="px-30 py-2 py-xs-5 py-lg-47_5 width-lg-fit-content rounded-6 shadow d-lg-flex justify-content-center mx-auto">
+                    <div class="me-15 mx-auto">
+                        <h1><a href="index.html" class="logo mx-auto">Let’s Travel !</a></h1>
+                        <img src="./image/Let’s Travel !.png" alt="undraw_Traveling_Logo" class="mb-10 mx-auto d-block">
+                    </div>
+                    <form action="index.html" id="addform">
+                        <h2 class="d-flex align-items-center pb-2 border-bottom-3 border-primany fs-12 fw-bold mb-16">
+                            <span class="material-symbols-outlined pe-3 fs-10">
+                                add_circle
+                            </span>新增旅遊套票
+                        </h2>
+                        <div class="d-sm-flex align-items-center mb-8">
+                            <label for="name" class="fw-bold me-15 d-block mb-3 mb-md-0">套票名稱</label>
+                            <input type="text" id="name" placeholder="請填寫套票名稱"
+                                class="placeholder--type ps-6 pt-6 pb-5 bg-color-gary1 flex-grow-1 border-bottom-1 border-primany border-none outline-none w-100 w-md-auto">
+                        </div>
+                        <div class="d-sm-flex align-items-center mb-8">
+                            <label for="img" class="fw-bold me-15 d-block mb-3 mb-md-0">圖片網址</label>
+                            <input type="text" id="img" placeholder="請填寫圖片網址"
+                                class="placeholder--type ps-6 pt-6 pb-5 bg-color-gary1 flex-grow-1 border-bottom-1 border-primany border-none outline-none w-100 w-md-auto">
+                        </div>
+                        <div class="d-sm-flex align-items-center mb-8 position-relative">
+                            <label for="addlocation" class="fw-bold me-15 d-block mb-3 mb-md-0">景點地區</label>
+                            <i class="fa-solid fa-sort position-absolute sort"></i>
+                            <select name="location" id="addlocation"
+                                class="placeholder ps-5 pt-6 pb-5 bg-color-gary1 flex-grow-1 border-bottom-1 border-primany border-none outline-none w-100 w-md-auto">
+                                <option value="請選擇景點地區" selected disabled>請選擇景點地區</option>
+                                <option value="台北" name="location">台北</option>
+                                <option value="台中" name="location">台中</option>
+                                <option value="高雄" name="location">高雄</option>
+                            </select>
+                        </div>
+                        <div class="d-sm-flex align-items-center mb-8">
+                            <label for="price" class="fw-bold me-15 d-block mb-3 mb-md-0">套票金額</label>
+                            <input type="text" id="price" placeholder="請填寫套票金額"
+                                class="placeholder--type ps-6 pt-6 pb-5 bg-color-gary1 flex-grow-1 border-bottom-1 border-primany border-none outline-none w-100 w-md-auto">
+                        </div>
+                        <div class="d-sm-flex align-items-center mb-8">
+                            <label for="groupNum" class="fw-bold me-15 d-block mb-3 mb-md-0">套票組數</label>
+                            <input type="text" id="groupNum" placeholder="請填寫套票組數"
+                                class="placeholder--type ps-6 pt-6 pb-5 bg-color-gary1 flex-grow-1 border-bottom-1 border-primany border-none outline-none w-100 w-md-auto">
+                        </div>
+                        <div class="d-sm-flex align-items-center mb-8">
+                            <label for="star" class="fw-bold me-15 d-block mb-3 mb-md-0">套票星級</label>
+                            <input type="text" id="star" placeholder="請填寫套票星級"
+                                class="placeholder--type ps-6 pt-6 pb-5 bg-color-gary1 flex-grow-1 border-bottom-1 border-primany border-none outline-none w-100 w-md-auto">
+                        </div>
+                        <div class="d-sm-flex mb-8">
+                            <label for="describe" class="fw-bold me-15 pt-4 d-block mb-3 mb-md-0">套票描述</label>
+                            <textarea name="describe" id="describe" cols="32" placeholder="請填寫套票描述（限 100 字）"
+                                class="placeholder--type ps-6 pt-4 bg-color-gary1 flex-grow-1 border-bottom-1 border-primany border-none outline-none w-100 w-md-auto"
+                                style="resize: none; height: 111px;"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-end"><input type="button" value="新增套票"
+                                class="px-5 py-20 border-none btn fs-10 line-height-1_25 rounded-2_4" id="addSetButton">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class=" pt-18 pb-50">
+            <div class="container">
+                <div class="d-lg-flex flex-wrap align-items-start mx-auto mb-28 justify-content-between"
+                    style="max-width: 920px;">
+                    <div
+                        class="d-sm-flex align-items-center justify-content-center justify-content-sm-start flex-grow-1 pt-16">
+                        <div
+                            class="position-relative d-flex align-items-center w-100 mb-5 m-sm-0 w-sm-28_5 flex-grow-0_1">
+                            <i class="fa-solid fa-sort position-absolute sort sort__2"></i>
+                            <select name="locationSearch" id="locationSearch"
+                                class="placeholder ps-6 pt-5 pb-5 pe-6 border-1 border-gary-1 outline-none rounded-2 flex-grow-1">
+                                <option value="地區搜尋" selected disabled name="locationSearch">地區搜尋</option>
+                                <option value="全部地區" name="locationSearch">全部地區</option>
+                                <option value="台北" name="locationSearch">台北</option>
+                                <option value="台中" name="locationSearch">台中</option>
+                                <option value="高雄" name="locationSearch">高雄</option>
+                                <option value="台南" name="locationSearch">台南</option>
+                            </select>
+                        </div>
+                        <p class="text-gary m-0 ms-sm-15" id="count"></p>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center chart__block">
+                        <div id="chart"></div>
+                    </div>
+                </div>
+                <div class="noSearchInformation d-flex justify-content-center align-items-center">
+
+                </div>
+                <ul class="list d-flex flex-wrap">
+                </ul>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/d3-5.8.2.min.js"></script>
+    <script src="./js/c3.js"></script>
+    <script src="./js/all.js"></script>
+</body>
+
+</html>
