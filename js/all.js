@@ -60,11 +60,11 @@ addSetButton.addEventListener("click", function (e) {
   if (errorSpace !== -1) {
 
     alertinfo("error", `新增套票時
-    ${errorRule[errorSpace]}不可空白`)
+    ${errorRule[errorSpace]}不可空白`);
     return;
   }
   else if (area === "請選擇景點地區") {
-    alertinfo("error", "請選擇景點地區")
+    alertinfo("error", "請選擇景點地區");
     return;
   }
   else if (isNaN(parseInt(price)) || isNaN(parseInt(group)) || isNaN(parseInt(rate))) {
@@ -72,7 +72,7 @@ addSetButton.addEventListener("click", function (e) {
     return;
   }
   else if (rate > 10 || rate < 1) {
-    alertinfo("error", "套票星級僅允許輸入1~10")
+    alertinfo("error", "套票星級僅允許輸入1~10");
     return;
   }
 
@@ -89,8 +89,15 @@ addSetButton.addEventListener("click", function (e) {
 function render(dataBase) {
 
   let info = ``;
+  let noInfoString = `<div>
+  <p class="fs-16 fw-bold text-gary py-5 px-30 text-center">查無相關資料</p>
+  <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/js_week5/no_found.png" class="mx-auto" alt="not_found">
+  </div>`;
   let count = dataBase.length;
   let chartObj = {};
+
+
+  dataBase.length === 0 ? noSearchInformation.innerHTML = noInfoString : noSearchInformation.innerHTML = "";
 
   dataBase.forEach(item => {
 
@@ -172,23 +179,12 @@ function render(dataBase) {
 locationSearch.addEventListener("change", e => {
   let target = locationSearch.value;
   let newData = data.filter(item => item.area === target);
-  let noInfoString = `<div>
-  <p class="fs-16 fw-bold text-gary py-5 px-30 text-center">查無相關資料</p>
-  <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/js_week5/no_found.png" class="mx-auto" alt="not_found">
-  </div>`;
 
-  if (target === "全部地區") {
-    render(data);
-    return
-  }
-
-  newData.length === 0 ? noSearchInformation.innerHTML = noInfoString : noSearchInformation.innerHTML = ""
-
-  render(newData);
+  target === "全部地區" ? render(data):render(newData);
 })
 
 function init() {
-  render(data)
+  render(data);
 }
 
 
